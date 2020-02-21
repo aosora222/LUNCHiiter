@@ -1,0 +1,35 @@
+.header
+  .fixed_btn
+    -# = link_to "店情報を追加する", new_item_path, class: 'top-text'
+    = image_submit_tag 'title.png' , height: '100%' , width: '100%' , class: 'logo'
+  .header__content
+    .header__content__search
+      %h1
+        = image_tag "title.png", class: "title" , height: "140px" , width: "140px"
+      = form_with(url: root_path, local: true, method: :get) do |f|
+        = f.text_field :keyword, placeholder: "キーワードから探す", class: "word"
+        = image_submit_tag 'icon-search 1.png' , height: '20px' , width: '20px' , class: 'logo'
+
+    .header__category
+      %ul.parent-wrap.header__category__search
+        %li.parent
+          %span カテゴリーから探す
+          %ul.child-wrap
+            -# - @categories.each do |category|
+              %li.child
+                -# =link_to '/' do（最後に）復活させる
+                %span
+                  -# = category.name
+                  %br
+
+        = link_to "ジャンル",  class: 'btn1'
+      .header__category__login
+        -# - if user_signed_in?
+        -#   = current_user.nickname
+        -#   = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn1'
+        -#   = link_to "マイページ", user_path(current_user.id), class: 'btn1'
+
+        -# - else
+          -# = link_to "ログイン", new_user_session_path, class: 'btn1'
+          -# = link_to "新規会員登録", new_user_registration_path, class: 'btn1'
+        ログイン
