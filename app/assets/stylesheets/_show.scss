@@ -1,0 +1,122 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  text-decoration: none;
+}
+.details {
+  width: 100%;
+  height: 100%;
+  background-color: #F8F8F8;
+  padding: 40px;
+  &__top {
+    width: 100%;max-width: 620px;
+    height: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 0 30px 30px;
+    &__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 10px;
+    padding-top: 10px;
+    }
+    &__middle {
+      background-color:#fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 auto;
+
+      &__up {
+        height: 346px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+      }
+      &__down {
+        width: 620px;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+    &__main{
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+    // &__itembox{
+    //   width: 620px;
+    //   height: 24px;
+    //   font-size: 16px;
+    //   display: flex;
+    //   justify-content: center;
+    //   background-color: #fff;
+    // }
+    &__itembox{
+      margin-bottom: 30px;
+      word-wrap: break-word;
+    }
+    &__list{
+      font-size: 14px;
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table th, table td {
+        border: 1px solid #dedede;
+      }
+      table th{
+        background-color: #eee;
+        width: 100px;
+        text-align: center;
+      }
+      table td {
+        width: 330px;
+        padding: 15px;
+      }
+    }
+    &__option {
+      display: flex;
+      padding-top: 30px;
+      font-size: 14px;
+      justify-content: space-between;
+      &__hosi {
+        padding: 8px 10px 6px 10px;
+        border-radius: 40px;
+        border: 1px solid #FFB340;
+        a {
+          color: #33CCCC;
+        }
+      }
+      &__report {
+        padding: 6px 10px;
+        color: #333;
+        border: 1px solid #333;
+        a{
+          color: black;
+        }
+      }
+    }
+  }
+  &__bottom {
+    margin: 0 auto;
+    text-align: center;
+    .comment{
+      width: 100%;
+      max-width: 340px;
+      padding: 15px 10px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 30px;
+      letter-spacing: 0.1em;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      background-color: #33CCCC;
+      background-size: 200% auto;
+    }
+  }
+}
