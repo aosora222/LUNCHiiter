@@ -1,2 +1,2 @@
-module LunchsHelper
+module LunchesHelper
 end
