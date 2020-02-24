@@ -119,4 +119,42 @@
       background-size: 200% auto;
     }
   }
+  &__item {
+    text-align: center;
+    background-color: #FFF;
+    width: 100%; max-width:620px;
+    margin: 10px auto 0;
+    padding: 30px;
+    &__changeboxes {
+      text-align: center;
+      width: 400px;
+      margin: 10px;
+      padding: 15px 10px;
+      display: inline-block;
+      border-radius: 30px;
+      letter-spacing: 0.1em;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      background-color: #33CCCC;
+      background-size: 200% auto;
+      &___btn {
+        background-color: gray;
+      }
+    }
+    .top-page {
+      width: 100%;
+      max-width: 340px;
+      padding: 15px 10px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 30px;
+      letter-spacing: 0.1em;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      background-color: #33CCCC;
+      background-size: 200% auto;
+    }
+  }
 }
