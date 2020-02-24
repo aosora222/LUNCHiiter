@@ -1,10 +1,11 @@
 class LunchesController < ApplicationController
   def index
+    @lunches = Lunch.includes(:images).all.limit(3).order(updated_at: :desc)
   end
 
   def new
     @lunch = Lunch.new
-    # @lunch.images.new
+    @lunch.images.new
   end
 
   def create
@@ -18,6 +19,6 @@ class LunchesController < ApplicationController
 
   private
   def lunch_params
-    params.require(:item).permit(:name, :price, :status, :category_id, :brand, :cost, :delivery, :send_address, :send_date, :condition, images_attributes: [:src, :_destroy, :id]).merge(seller_id: current_user.id)
+    params.require(:lunch).permit(:name, :main, :tel, :addless, :parking, :business_day, :business_time, :holiday, :budget, :hp, :remarks, images_attributes: [:src, :_destroy, :id])
   end
 end

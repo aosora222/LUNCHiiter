@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_043913) do
   create_table "lunches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "main", null: false
-    t.integer "tel", null: false
+    t.string "tel", null: false
     t.string "addless", null: false
     t.string "parking", null: false
     t.string "business_day", null: false

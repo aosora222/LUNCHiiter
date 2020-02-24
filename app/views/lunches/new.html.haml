@@ -24,11 +24,11 @@
               = file_field_tag :src, name: "lunch[images_attributes][#{@lunch.images.count}][src]", class: 'js-file'
               .js-remove 削除
       .lunch__main__name
-        商品名
+        店名
         %span 必須
         = f.text_field :name, class: 'lunch-name', placeholder: '  店名 (必須40文字まで)'
         %br
-        商品の説明
+        メインランチ
         %span 必須
         = f.text_area :main, class: 'lunch-exposition', placeholder: '（メインメニュー(必須1,000文字以内）（メニュー名、素材、値段など）例）   大人気唐揚げ定食　680円）'
       .lunch__main__information
@@ -42,7 +42,7 @@
               %span 必須
               %br
               .tele
-                = f.number_field :tel, class: 'lunch-price', placeholder: '  例）090*******9'
+                = f.text_field :tel, class: 'lunch-name', placeholder: '  例）090*******9'
           .lunch__main__information__right__content
             .lunch__main__information__right__content__item
               %b 住所
@@ -51,38 +51,44 @@
               = f.text_field :addless, class: 'lunch-name', placeholder: '  例）oo県oo市oo区oo１−１−１'
           .lunch__main__information__right__content
             .lunch__main__information__right__content__item
-              %b  営業日
+              %b 駐車場
             .lunch__main__information__right__content__form
               %span 必須
-              = f.text_field :business_day, class: 'lunch-day', placeholder: '  例）月〜金曜日 '
+              = f.text_field :parking, class: 'lunch-name', placeholder: '  例）専用駐車場あり'
           .lunch__main__information__right__content
             .lunch__main__information__right__content__item
               %b  営業日
             .lunch__main__information__right__content__form
               %span 必須
-              = f.text_field :business_time, class: 'lunch-time', placeholder: '  例）11:30~15:00 '
+              = f.text_field :business_day, class: 'lunch-name', placeholder: '  例）月〜金曜日 '
           .lunch__main__information__right__content
             .lunch__main__information__right__content__item
               %b  営業時間
             .lunch__main__information__right__content__form
               %span 必須
-              = f.text_field :holiday, class: 'lunch-holiday', placeholder: '  例）土日祝 '
+              = f.text_field :business_time, class: 'lunch-name', placeholder: '  例）11:30~15:00 '
+          .lunch__main__information__right__content
+            .lunch__main__information__right__content__item
+              %b  定休日
+            .lunch__main__information__right__content__form
+              %span 必須
+              = f.text_field :holiday, class: 'lunch-name', placeholder: '  例）土日祝 '
           .lunch__main__information__right__content
             .lunch__main__information__right__content__item
               %b  ホームページ
             .lunch__main__information__right__content__form
               %span.gray 任意
-              = f.text_field :hp, class: 'lunch-hp', placeholder: '  http '
+              = f.text_field :hp, class: 'lunch-name', placeholder: '  http '
           .lunch__main__information__right__content
             .lunch__main__information__right__content__item
               %b  備考欄
             .lunch__main__information__right__content__form
               %span.gray 任意
-              = f.text_field :remarks, class: 'lunch-remarks', placeholder: '  例）第３木曜日定休日です '
+              = f.text_field :remarks, class: 'lunch-name', placeholder: '  例）第３木曜日定休日です '
       .lunch__main__price
         平均予算
         .lunch__main__price__left
-          価格
+          値段
           %span 必須
         .lunch__main__price__right
           ¥
@@ -97,7 +103,7 @@
           また、紹介・登録をもちまして
           = link_to "加盟店規約",'#'
           に同意したことになります。
-        .main__sell__input__middle
+        .lunch__main__input__middle
           = f.submit '紹介・登録する', class: 'lunch-new'
-        .main__sell__input__bottom
-          = link_to 'もどる', '#'
+        .lunch__main__input__bottom
+          = link_to 'もどる', root_path

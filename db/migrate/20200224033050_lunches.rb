@@ -3,7 +3,7 @@ class Lunches < ActiveRecord::Migration[5.2]
     create_table :lunches do |t|
       t.string     :name,          null: false
       t.string     :main,          null: false
-      t.integer    :tel,           null: false
+      t.string     :tel,           null: false
       t.string     :addless,       null: false, foreign_key: true
       t.string     :parking,       null: false
       t.string     :business_day,  null: false
