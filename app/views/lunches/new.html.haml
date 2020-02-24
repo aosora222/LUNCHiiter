@@ -1,0 +1,103 @@
+.lunch
+  .lunch__main
+    = form_for @lunch do |f|
+      .lunch__main__top
+        %h1 お店の情報を入力
+      .lunch__main__img
+        %h3 お店の画像
+        %span 必須
+        #image-box
+          #previews
+            - if @lunch.persisted?
+              - @lunch.images.each_with_index do |image, i|
+                = image_tag image.src.url, data: { index: i }, width: "100", height: '100'
+          = f.fields_for :images do |image|
+            .js-file_group{"data-index" => "#{image.index}"}
+              = image.file_field :src, class: 'js-file'
+              = image.hidden_field :id, value: image.object.id
+              %br/
+              %span.js-remove 削除
+            - if @lunch.persisted?
+              = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
+          - if @lunch.persisted?
+            .js-file_group{"data-index" => "#{@lunch.images.count}"}
+              = file_field_tag :src, name: "lunch[images_attributes][#{@lunch.images.count}][src]", class: 'js-file'
+              .js-remove 削除
+      .lunch__main__name
+        商品名
+        %span 必須
+        = f.text_field :name, class: 'lunch-name', placeholder: '  店名 (必須40文字まで)'
+        %br
+        商品の説明
+        %span 必須
+        = f.text_area :main, class: 'lunch-exposition', placeholder: '（メインメニュー(必須1,000文字以内）（メニュー名、素材、値段など）例）   大人気唐揚げ定食　680円）'
+      .lunch__main__information
+        .lunch__main__information__left
+          %h3  お店の詳細
+        .lunch__main__information__right
+          .lunch__main__information__right__content
+            .lunch__main__information__right__content__item
+              %b 電話番号
+            .lunch__main__information__right__content__form
+              %span 必須
+              %br
+              .tele
+                = f.number_field :tel, class: 'lunch-price', placeholder: '  例）090*******9'
+          .lunch__main__information__right__content
+            .lunch__main__information__right__content__item
+              %b 住所
+            .lunch__main__information__right__content__form
+              %span 必須
+              = f.text_field :addless, class: 'lunch-name', placeholder: '  例）oo県oo市oo区oo１−１−１'
+          .lunch__main__information__right__content
+            .lunch__main__information__right__content__item
+              %b  営業日
+            .lunch__main__information__right__content__form
+              %span 必須
+              = f.text_field :business_day, class: 'lunch-day', placeholder: '  例）月〜金曜日 '
+          .lunch__main__information__right__content
+            .lunch__main__information__right__content__item
+              %b  営業日
+            .lunch__main__information__right__content__form
+              %span 必須
+              = f.text_field :business_time, class: 'lunch-time', placeholder: '  例）11:30~15:00 '
+          .lunch__main__information__right__content
+            .lunch__main__information__right__content__item
+              %b  営業時間
+            .lunch__main__information__right__content__form
+              %span 必須
+              = f.text_field :holiday, class: 'lunch-holiday', placeholder: '  例）土日祝 '
+          .lunch__main__information__right__content
+            .lunch__main__information__right__content__item
+              %b  ホームページ
+            .lunch__main__information__right__content__form
+              %span.gray 任意
+              = f.text_field :hp, class: 'lunch-hp', placeholder: '  http '
+          .lunch__main__information__right__content
+            .lunch__main__information__right__content__item
+              %b  備考欄
+            .lunch__main__information__right__content__form
+              %span.gray 任意
+              = f.text_field :remarks, class: 'lunch-remarks', placeholder: '  例）第３木曜日定休日です '
+      .lunch__main__price
+        平均予算
+        .lunch__main__price__left
+          価格
+          %span 必須
+        .lunch__main__price__right
+          ¥
+          = f.number_field :budget, class: 'lunch-price', placeholder: '  例）700'
+      .lunch__main__input
+        .lunch__main__input__top
+          %P
+          お店情報を入れる際は
+          = link_to "こちら",'#'
+          を必ずご確認ください。
+          %br
+          また、紹介・登録をもちまして
+          = link_to "加盟店規約",'#'
+          に同意したことになります。
+        .main__sell__input__middle
+          = f.submit '紹介・登録する', class: 'lunch-new'
+        .main__sell__input__bottom
+          = link_to 'もどる', '#'

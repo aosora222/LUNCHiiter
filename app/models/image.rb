@@ -1,4 +1,4 @@
 class Image < ApplicationRecord
-  mount_uploader :image_name, ImageUploader
+  mount_uploader :src, ImageUploader
   belongs_to :lunch
 end

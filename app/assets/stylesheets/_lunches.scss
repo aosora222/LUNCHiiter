@@ -82,7 +82,7 @@
 }
 
 
-
+// トップメイン
 .main {
   position: relative;
 
@@ -179,5 +179,124 @@
     font-size: 35px;
     text-shadow: 0 0 5px rgba(0,0,0,0.4);
     color: white;
+  }
+}
+
+
+
+// お店情報入力ページ
+.lunch {
+  width: 100%; max-width: 700px;
+  background: #fff;
+  font-size: 14px;
+  &__main {
+    span {
+      margin: 0 0 0 8px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 12px;
+      vertical-align: top;
+      background-color: red;
+    }
+    span.gray {
+      margin: 0 0 0 8px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 12px;
+      vertical-align: top;
+      background-color:rgb(206, 206, 206);
+    }
+    span.js-remove {
+      background-color: #fff;
+      color: black;
+    }
+    &__top {
+      text-align: center;
+      padding: 32px 16px;
+      font-size: 22px;
+      border-bottom: solid 1px rgb(241, 241, 241);
+    }
+    &__img {
+      padding: 40px;
+      border-bottom: solid 1px rgb(241, 241, 241);
+    }
+    &__name {
+      padding: 40px;
+      border-bottom: solid 1px rgb(241, 241, 241);
+      width: 100%;
+      box-sizing: border-box;
+      .lunch-name {
+        width: 95%;
+        margin: 8px 0 0;
+        padding: 10px 16px 8px;
+      }
+      .lunch-exposition {
+        width: 95%;
+        height: 120px;
+        margin-top: 8px;
+        padding: 10px 16px 8px;
+      }
+    }
+    &__information {
+      padding: 40px;
+      border-bottom: solid 1px rgb(241, 241, 241);
+      display: flex;
+      justify-content: space-between;
+      &__right {
+        &__content {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+            &__form {
+              width: 400px;
+              .category_form{
+                margin-left: auto;
+                .lunch-name {
+                  width: 400px;
+                  height: 48px;
+                  padding: 0 16px;
+                  margin-top: 10px;
+                  }
+              }
+            }
+          }
+        }
+    }
+    &__price {
+      padding: 40px;
+      border-bottom: solid 1px rgb(241, 241, 241);
+      display: flex;
+      justify-content: space-between;
+      &__right{
+        .lunch-price{
+          height: 48px;
+          width: 150px;
+          padding: 10px 16px 8px 16px;
+          box-sizing: border-box;
+          text-align: right;
+        }
+      }
+    }
+    &__input {
+      padding: 40px;
+      border-bottom: solid 1px rgb(241, 241, 241);
+      &__top {
+        a {
+          text-decoration: none;
+          color: rgb(77, 130, 243);
+        }
+      }
+      &__middle {
+        padding: 40px 0 25px;
+        .lunch-new {
+          width: 100vw; max-width: 640px;
+          height: 50px;
+          background-color: red;
+          color: white;
+        }
+      }
+    }
   }
 }
