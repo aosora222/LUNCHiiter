@@ -76,5 +76,9 @@
       %form{cols:  "120",row:  "10"}
     .comment
       = link_to 'コメントする'
-    .comment
+  .details__item
+    .details__item__changeboxes
+      .details__item__changeboxes__btn
+        = link_to 'お店の編集', edit_lunch_path(@lunch.id)
+    .top-page
       = link_to 'もどる', root_path

@@ -23,6 +23,17 @@ class LunchesController < ApplicationController
     @images = @lunch.images
   end
 
+  def edit
+  end
+
+  def update
+    if @lunch.update(lunch_params)
+      redirect_to lunch_path(@lunch.id)
+    else
+      redirect_to edit_item_path(@lunch.id)
+    end
+  end
+
   private
   def lunch_params
     params.require(:lunch).permit(:name, :main, :tel, :addless, :parking, :business_day, :business_time, :holiday, :budget, :hp, :remarks, images_attributes: [:src, :_destroy, :id])
