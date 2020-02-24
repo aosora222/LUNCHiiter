@@ -17,17 +17,17 @@
       新着情報
     .main__content__image
       .main__content__image__store
-      -# - @stores.each do |store|
-      -#   - image = store.images.first
-      -#   = link_to store_path(store.id), class: 'btn100' do
+      -# - @lunchs.each do |lunch|
+      -#   - image = lunch.images.first
+      -#   = link_to lunch_path(lunch.id), class: 'btn100' do
           .main__content__image__store__pick
-            -# - if store.holiday?
+            -# - if lunch.holiday?
               .holiday
             -# = image_submit_tag image.image_name, class: "image10" , height: "150px" , width: "220px"
             .main__content__image__store__pick__name
-              -# = store.name
+              -# = lunch.name
               .main__content__image__store__pick__name__genre
-                -# = store.genre
+                -# = lunch.genre
                 .main__content__image__store__pick__name__genre__hosi
                   ★0
 .wrapper
