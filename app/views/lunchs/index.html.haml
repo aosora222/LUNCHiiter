@@ -1,7 +1,34 @@
 .wrapper
   = render 'shared/header'
 .main
-  = image_tag '727697.jpg' , height: '550px' , width: '100%' , class: 'image'
+  = image_tag '480923.jpg' , height: '550px' , width: '100%' , class: 'image'
+  .main__up
+    みんなで隠れた名店を見つけよう
+  .main__down
+    LUNCHitter(ランチッター)はだれでもかんたんにお店を検索、コメントできる
+    .dr
+      ランチに特化したアプリです
 
--# .wrapper
--#     = render 'shared/footer'
+  .main__content
+
+    .main__content__title
+      ピックアップ
+    .main__content__title2
+      新着情報
+    .main__content__image
+      .main__content__image__store
+      -# - @stores.each do |store|
+      -#   - image = store.images.first
+      -#   = link_to store_path(store.id), class: 'btn100' do
+          .main__content__image__store__pick
+            -# - if store.holiday?
+              .holiday
+            -# = image_submit_tag image.image_name, class: "image10" , height: "150px" , width: "220px"
+            .main__content__image__store__pick__name
+              -# = store.name
+              .main__content__image__store__pick__name__genre
+                -# = store.genre
+                .main__content__image__store__pick__name__genre__hosi
+                  ★0
+.wrapper
+  = render 'shared/footer'
