@@ -1,0 +1,80 @@
+.details
+  .details__top
+    .details__top__title
+      = @lunch.name
+    .details__top__middle
+      .details__top__middle__up
+        = image_tag ("#{@images.first.src}"), class: "image111", height: "500px", width: "400px"
+      .details__top__middle__down
+        - @images.each do |image|
+          = image_tag image.src.url, class: "image111", height: "90px", width: "140px"
+    .details__top__main
+      看板メニュー
+    .details__top__main
+      = @lunch.main
+    .details__top__itembox
+      お店情報
+    .details__top__itembox
+      %p= @lunch.remarks
+    .details__top__list
+      %table{border:  "1"}
+        %tr
+          %th 電話番号
+          %td
+            = @lunch.tel
+        %tr
+          %th 住所
+          %td
+            = @lunch.addless
+        %tr
+          %th 駐車場
+          %td
+            = @lunch.parking
+        %tr
+          %th 営業日
+          %td
+            = @lunch.business_day
+        %tr
+          %th 営業時間
+          %td
+            = @lunch.business_time
+        %tr
+          %th 定休日
+          %td
+            = @lunch.holiday
+        %tr
+          %th ホームページ
+          %td
+            = @lunch.hp
+        %tr
+          %th 備考欄
+          %td
+            = @lunch.remarks
+        %tr
+          %th 平均予算
+          %td
+            = @lunch.budget
+            円
+
+
+    .details__top__option
+      .details__top__option__hosi
+        = link_to root_path do
+          ★ お気に入り 3
+      .details__top__option__report
+        = link_to root_path do
+          🏴不適切なお店の通報
+
+  .details__bottom
+    .details__bottom__high
+      %textarea{cols:  "70", rows:  "6"}
+    .details__bottom__low
+      %p.noticeMsg
+      相手のことを考え丁寧なコメントを心がけましょう。
+      %br/
+      不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %form{cols:  "120",row:  "10"}
+    .comment
+      = link_to 'コメントする'
+    .comment
+      = link_to 'もどる', root_path
