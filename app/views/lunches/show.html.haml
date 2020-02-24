@@ -80,5 +80,8 @@
     .details__item__changeboxes
       .details__item__changeboxes__btn
         = link_to 'お店の編集', edit_lunch_path(@lunch.id)
+    .details__item__changeboxes
+      .details__item__changeboxes__btn
+        = link_to '削除', "#{@lunch.id}", method: :delete
     .top-page
       = link_to 'もどる', root_path

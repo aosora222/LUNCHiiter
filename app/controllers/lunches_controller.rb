@@ -1,5 +1,5 @@
 class LunchesController < ApplicationController
-  before_action :set_lunch, only: [:edit, :update, :show]
+  before_action :set_lunch, only: [:edit, :update, :show, :destroy]
 
   def index
     @lunches = Lunch.includes(:images).all.limit(3).order(updated_at: :desc)
@@ -32,6 +32,11 @@ class LunchesController < ApplicationController
     else
       redirect_to edit_item_path(@lunch.id)
     end
+  end
+
+  def destroy
+    @lunch.destroy
+    redirect_to root_path
   end
 
   private
