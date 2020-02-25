@@ -119,7 +119,7 @@
       background-size: 200% auto;
     }
   }
-  &__item {
+  &__btn {
     text-align: center;
     background-color: #FFF;
     width: 100%; max-width:620px;
@@ -141,20 +141,6 @@
       &___btn {
         background-color: gray;
       }
-    }
-    .top-page {
-      width: 100%;
-      max-width: 340px;
-      padding: 15px 10px;
-      display: inline-block;
-      text-align: center;
-      border-radius: 30px;
-      letter-spacing: 0.1em;
-      color: #fff;
-      -webkit-font-smoothing: antialiased;
-      -moz-font-smoothing: antialiased;
-      background-color: #33CCCC;
-      background-size: 200% auto;
     }
   }
 }
