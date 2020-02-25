@@ -1,0 +1,9 @@
+.details
+  .details__btn
+    全て削除します本当によろしいですか？
+    .details__btn__changeboxes
+      .details__btn__changeboxes__color
+        = link_to '削除', "#{@lunch.id}", method: :delete
+    .details__btn__changeboxes
+      .details__btn__changeboxes__color
+        = link_to 'もどる', lunch_path(@lunch.id)

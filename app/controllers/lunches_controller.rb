@@ -39,6 +39,11 @@ class LunchesController < ApplicationController
     redirect_to root_path
   end
 
+  def confirm
+    @lunch = Lunch.find(params[:format])
+  end
+
+
   private
   def lunch_params
     params.require(:lunch).permit(:name, :main, :tel, :addless, :parking, :business_day, :business_time, :holiday, :budget, :hp, :remarks, images_attributes: [:src, :_destroy, :id])
