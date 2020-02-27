@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_24_043913) do
+ActiveRecord::Schema.define(version: 2020_02_26_044850) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "text", null: false
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 2020_02_24_043913) do
     t.datetime "updated_at", null: false
     t.index ["lunch_id"], name: "index_comments_on_lunch_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "lunch_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lunch_id"], name: "index_favorites_on_lunch_id"
+    t.index ["user_id", "lunch_id"], name: "index_favorites_on_user_id_and_lunch_id", unique: true
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -44,6 +54,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_043913) do
     t.string "remarks"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "favorites_count", default: 0, null: false
   end
 
   create_table "lunches_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

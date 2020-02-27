@@ -20,6 +20,7 @@ class LunchesController < ApplicationController
   end
 
   def show
+
     @images = @lunch.images
   end
 
