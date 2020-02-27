@@ -59,8 +59,8 @@
 
     .details__top__option
       .details__top__option__hosi
-        = link_to root_path do
-          ★ お気に入り 3
+        ★ お気に入り
+        = render "favorites/favorite", lunch: @lunch
       .details__top__option__report
         = link_to root_path do
           🏴不適切なお店の通報

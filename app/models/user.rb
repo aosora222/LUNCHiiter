@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :lunches_users
   has_many :lunches, through: :lunches_users
   has_many :comments
+  has_many :favorites, dependent: :destroy
 end
