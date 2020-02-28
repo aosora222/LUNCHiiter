@@ -116,6 +116,7 @@
     height: 400px;
     width: 100%;
     padding: 80px 0 ;
+    background-color: rgb(255, 246, 246);
     &__title {
       text-align: center;
       font-size: 28px;
@@ -132,24 +133,27 @@
       justify-content: space-between;
       margin: 25px auto;
       width: 800px;
-
+      a {
+        border: solid 1px rgb(109, 108, 108);
+      }
       &__store {
         &__pick {
           position: relative;
           *{
             color: black;
           }
+          .main-menu {
+            background-color: rgb(255, 196, 181);
+            padding-left: 10px;
+          }
           &__name {
             height: 70px;
             width: 200px;
             padding: 10px;
-            margin-right: 20px;
+            background-color: rgb(255, 253, 250);
             &__genre {
               display: flex;
               padding: 5px 0 0 0;
-              &__hosi {
-                padding: 0 0 0 130px;
-              }
             }
           }
         }

@@ -24,11 +24,12 @@
             -# - if lunch.holiday?
             .holiday
               = image_submit_tag image.src, class: "image10" , height: "150px" , width: "220px"
+            .main-menu
+              看板メニュー
             .main__content__image__store__pick__name
               = lunch.name
               .main__content__image__store__pick__name__genre
-                = lunch.budget
-                .main__content__image__store__pick__name__genre__hosi
-                  ★0
+                平均予算
+                #{lunch.budget}円　★#{lunch.favorites_count}
 .wrapper
   = render 'shared/footer'
