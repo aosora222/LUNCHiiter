@@ -8,4 +8,4 @@
       = form_for(lunch.favorites.build, remote: true) do |f|
         %div= hidden_field_tag :lunch_id, lunch.id
         = button_tag(class: "btn-default") do
-          = content_tag :span, "#{lunch.favorites_count}", class: "heart-empty"
+          = content_tag :span, "#{lunch.favorites_count}", class: "heart"
