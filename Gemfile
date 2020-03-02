@@ -72,6 +72,7 @@ gem 'pry-rails'
 gem 'counter_culture', '~> 1.8'
 gem 'jquery-rails'
 gem 'sassc'
+gem 'fog-aws'
 
 group :production do
   gem 'pg'
