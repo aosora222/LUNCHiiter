@@ -5,6 +5,7 @@ class FavoritesController < ApplicationController
     @lunch = Lunch.find(params[:lunch_id])
     unless @lunch.iine?(current_user)
       @lunch.iine(current_user)
+      @lunch.reload
       respond_to do |format|
         format.html { redirect_to request.referrer || root_url }
         format.js
@@ -16,6 +17,7 @@ class FavoritesController < ApplicationController
     @lunch = Favorite.find(params[:id]).lunch
     if @lunch.iine?(current_user)
       @lunch.uniine(current_user)
+      @lunch.reload
       respond_to do |format|
         format.html { redirect_to request.referrer || root_url }
         format.js
