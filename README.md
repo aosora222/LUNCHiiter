@@ -4,11 +4,13 @@
 
 # デモ画面
 
-トップ画面です
+# トップ画面です
 <img width="1010" alt="トップ" src="https://user-images.githubusercontent.com/59185844/76202695-996d7700-6238-11ea-8a1b-d2577391aa36.png">
-ランチ登録画面です
+
+# ランチ登録画面です
 <img width="883" alt="詳細" src="https://user-images.githubusercontent.com/59185844/76202703-9bcfd100-6238-11ea-95f2-e7d0962b69a0.png">
-ランチ詳細画面です
+
+# ランチ詳細画面です
 <img width="957" alt="登録" src="https://user-images.githubusercontent.com/59185844/76202710-9d999480-6238-11ea-97cd-476e14f33f28.png">
 
 
