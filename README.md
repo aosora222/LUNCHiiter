@@ -2,8 +2,6 @@
 
 ランチに特化した情報共有アプリ
 
-# デモ画面
-
 # トップ画面です
 <img width="1010" alt="トップ" src="https://user-images.githubusercontent.com/59185844/76202695-996d7700-6238-11ea-8a1b-d2577391aa36.png">
 
