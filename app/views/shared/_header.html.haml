@@ -24,7 +24,7 @@
       = link_to "ジャンル",  class: 'btn'
     .header__category__login
       - if user_signed_in?
-        -# = current_user.nickname
+        = current_user.nickname
         = link_to "ログアウト", destroy_user_session_path, method: :delete
         -# = link_to "マイページ", user_path(current_user.id)
 
