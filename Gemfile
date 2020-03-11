@@ -74,7 +74,7 @@ gem 'counter_culture', '~> 1.8'
 gem 'jquery-rails'
 gem 'sassc'
 gem 'fog-aws'
-
+gem "aws-sdk-s3", require: false
 group :production do
   gem 'pg'
 end
