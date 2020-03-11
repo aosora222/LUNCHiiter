@@ -1,7 +1,6 @@
 .page
   .page__left
     .page__left__top
-      = link_to root_path do
         .page__left__top__text
           お気に入り一覧
       = link_to root_path do
@@ -13,18 +12,17 @@
       = link_to root_path do
         .page__left__top__text
           お問い合わせ
-    .page__left__text2
+    .page__left__text
       設定
     .page__left__bottom
-      = link_to root_path do
-        .page__left__bottom__text1
+        .page__left__bottom__text
           プロフィール
       = link_to root_path do
-        .page__left__bottom__text1
+        .page__left__bottom__text
           メール・パスワード
       = link_to root_path do
-        .page__left__bottom__text1
+        .page__left__bottom__text
           本人情報
       = link_to root_path do
-        .page__left__bottom__text1
+        .page__left__bottom__text
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn1'
